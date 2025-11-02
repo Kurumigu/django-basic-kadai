@@ -13,6 +13,7 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     img = models.ImageField(blank=True, default='noImage.png')
     image = models.ImageField(upload_to='images/', blank=True, null=True)
+    detail = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return self.name
